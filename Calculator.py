@@ -8,15 +8,12 @@ operator = str(input("Введите оператор "))
 user_num_two = int(input("Введите второе число "))
 if operator == '+':
     result = user_num_one + user_num_two
-    print(result)
 elif operator == '-':
     result = user_num_one - user_num_two
-    print(result)
 elif operator == '*':
     result = user_num_one * user_num_two
-    print(result)
 elif operator == '/':
     result = user_num_one / user_num_two
-    print(result)
 else:
     print("Ошибка ввода")
+print("Результат: ", result)
