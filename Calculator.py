@@ -1,10 +1,10 @@
 # Господа, эта программа предназначена для выполнения вычислений
 
-print("Вас приветствует интерактивная программа-калькулятор")
+print("Вас приветствует интерактивная программа-калькулятор!")
 print("Здесь вы можете упростить свою жизнь и избавиться от необходимости самому выполнять вычисления") 
+print()
 
 continued = 1
-
 while continued != 'n':
 
     user_check_one = 'false'
@@ -20,7 +20,7 @@ while continued != 'n':
             user_check_one = 'true'
 
     while convert == 0:     # Проверка оператора
-        operator = str(input("Введите оператор "))
+        operator = input("Введите оператор ")
         if operator == '+':     # Со строками логика работать не хочет, поэтому приходится делать так
             convert = 1
         elif operator == '-':
@@ -50,8 +50,15 @@ while continued != 'n':
     else:
         result = user_num_one / user_num_two
 
+    check_result = result - int(result)     # Эта конструкция позволяет избавиться от нуля в конечном результате при получении целого числа
+    if check_result == 0:
+        final_result = int(result)
+    else:
+        final_result = result
+        
     print()
-    print("Результат: ", result)
+    print("Результат: ", final_result)
     print()
     print("Продолжить? ")
-    continued = str(input("Любой ввод - да, n - нет "))
+    continued = input("Любой ввод - да, n - нет ")
+    print()
